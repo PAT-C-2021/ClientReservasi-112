@@ -448,5 +448,30 @@ namespace WindowsFormsApp1.ServiceReference1 {
             WindowsFormsApp1.ServiceReference1.PemesananRequest inValue = new WindowsFormsApp1.ServiceReference1.PemesananRequest();
             return ((WindowsFormsApp1.ServiceReference1.IService1)(this)).Pemesanan1Async(inValue);
         }
+
+        internal string Register(string username, string password, string kategori)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal string UpdateRegister(string username, string password, string kategori, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal string DeleteRegister(string username)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal object DataRegist()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal string Login(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

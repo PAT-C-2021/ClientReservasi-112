@@ -136,6 +136,7 @@ namespace WindowsFormsApp1
             this.btSimpan.TabIndex = 11;
             this.btSimpan.Text = "Simpan";
             this.btSimpan.UseVisualStyleBackColor = true;
+            this.btSimpan.Click += new System.EventHandler(this.btSimpan_Click);
             // 
             // btClear
             // 
@@ -145,6 +146,7 @@ namespace WindowsFormsApp1
             this.btClear.TabIndex = 12;
             this.btClear.Text = "Clear";
             this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
             // btHapus
             // 
@@ -154,6 +156,7 @@ namespace WindowsFormsApp1
             this.btHapus.TabIndex = 13;
             this.btHapus.Text = "Hapus";
             this.btHapus.UseVisualStyleBackColor = true;
+            this.btHapus.Click += new System.EventHandler(this.btHapus_Click);
             // 
             // btUpdate
             // 
@@ -163,6 +166,7 @@ namespace WindowsFormsApp1
             this.btUpdate.TabIndex = 14;
             this.btUpdate.Text = "Update";
             this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // dtPemesanan
             // 

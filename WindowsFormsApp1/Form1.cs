@@ -66,20 +66,7 @@ namespace WindowsFormsApp1
 
         public void Clear()
         {
-            textBoxID.Clear();
-            textBoxNama.Clear();
-            textBoxNoTelf.Clear();
-            textBoxJumlah.Clear();
-            textBoxIDLokasi.Clear();
-
-            textBoxJumlah.Enabled = true;
-            textBoxIDLokasi.Enabled = true;
-
-            btSimpan.Enabled = true;
-            btUpdate.Enabled = false;
-            btHapus.Enabled = false;
-
-            textBoxID.Enabled = true;
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -108,6 +95,60 @@ namespace WindowsFormsApp1
         private void textBoxID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btSimpan_Click(object sender, EventArgs e)
+        {
+            string IDPemesanan = textBoxID.Text;
+            string NamaCustomer = textBoxNama.Text;
+            string NoTelepon = textBoxNoTelf.Text;
+            int JumlahPemesanan = int.Parse(textBoxJumlah.Text);
+            string IDLokasi = textBoxIDLokasi.Text;
+
+            var a = service.pemesanan(IDPemesanan, NamaCustomer, NoTelepon, JumlahPemesanan, IDLokasi);
+            MessageBox.Show(a);
+            TampilData();
+            Clear();
+        }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            string IDPemesanan = textBoxID.Text;
+            string NamaCustomer = textBoxNama.Text;
+            string NoTelepon = textBoxNoTelf.Text;
+
+            var a = service.editPemesanan(IDPemesanan, NamaCustomer, NoTelepon);
+            MessageBox.Show(a);
+            TampilData();
+            Clear();
+        }
+
+        private void btHapus_Click(object sender, EventArgs e)
+        {
+            String IDPemesanan = textBoxID.Text;
+
+            var a = service.deletePemesanan(IDPemesanan);
+            MessageBox.Show(a);
+            TampilData();
+            Clear();
+        }
+
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            textBoxID.Clear();
+            textBoxNama.Clear();
+            textBoxNoTelf.Clear();
+            textBoxJumlah.Clear();
+            textBoxIDLokasi.Clear();
+
+            textBoxJumlah.Enabled = true;
+            textBoxIDLokasi.Enabled = true;
+
+            btSimpan.Enabled = true;
+            btUpdate.Enabled = false;
+            btHapus.Enabled = false;
+
+            textBoxID.Enabled = true;
         }
     }
 }
